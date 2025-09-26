@@ -1,0 +1,30 @@
+RewriteEngine On
+
+# Redirect all requests to index.php except for existing files and directories
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?route=$1 [QSA,L]
+
+# Additional security rules
+<Files "config.php">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+# Prevent access to sensitive files
+<FilesMatch "\.(htaccess|htpasswd|ini|log|sh|inc|bak)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+RewriteEngine On
+
+RewriteEngine On
+
+# Remove .php extension
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^([^/]+)/?$ $1.php [L]
+
+# Make index.php the default
+DirectoryIndex index.php
+

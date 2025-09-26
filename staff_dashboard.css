@@ -1,0 +1,245 @@
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+    * { box-sizing: border-box; 
+      margin: 0; 
+      padding: 0; 
+      font-family: 'Poppins', sans-serif; 
+      width: 100% 
+    }
+
+    html, body { height: 100vh; }
+
+    body {
+      display: flex;
+      background-color: #f4f6f8;
+    }
+
+    .sidebar {
+      width: 250px;
+      background-color: #7c0000;
+      color: white;
+      padding: 20px;
+      height: 100%;
+    }
+
+    .sidebar img {
+      width: 100px;
+      height: 100px;
+      display: block;
+      margin: 0 auto 10px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: white;
+    }
+
+    .sidebar h2 {
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .panel-title {
+      text-align: center;
+      font-size: 14px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .panel-title i {
+      font-size: 10px;
+      cursor: pointer;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 10px;
+      margin: 5px 0;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: #5e0000;
+    }
+
+    .main {
+      flex: 1;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      height: 90%;
+    }
+
+    .header {
+      background-color: #7c0000;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .section { display: none; }
+
+    .stats-box {
+      background-color: #ffffff;
+      color: #7c0000;
+      border-left: 8px solid #7c0000;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      width: 200px;
+      text-align: center;
+    }
+
+    #queries .card {
+      display: flex;
+      height: calc(100vh - 40px);
+      padding: 0;
+    }
+
+    #studentList {
+      list-style: none; padding: 0; margin: 0;
+    }
+
+    #studentList li {
+      padding: 12px 15px;
+      border-bottom: 1px solid #ddd;
+      cursor: pointer;
+    }
+
+    #studentList li:hover{
+      background-color: #ddd;
+    }
+
+    #studentList li.active {
+      background-color: #ddd;
+      color: black;
+      font-weight: bold;
+
+    }
+
+    #chatHeader {
+      padding: 10px 15px;
+      background-color: #7c0000;
+      color: white;
+      border-top-right-radius: 10px;
+    }
+
+    #chatBox {
+      flex: 1;
+      padding: 15px;
+      background-color: #f9f9f9;
+      overflow-y: auto;
+    }
+
+    #queries form {
+      display: flex;
+      padding: 10px;
+      background-color: white;
+      border-bottom-right-radius: 10px;
+      align-items: center;
+    }
+
+    #chatInput {
+      flex: 1;
+      padding: 10px;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+    }
+
+    #queries button {
+      margin-left: 10px;
+      padding: 10px 20px;
+      background-color: #7c0000;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    .message-left, .message-right {
+      padding: 10px 15px;
+      border-radius: 20px;
+      max-width: 70%;
+      margin-bottom: 10px;
+      display: inline-block;
+      clear: both;
+    }
+
+    .message-left { background-color: #e0e0e0; float: left; }
+    .message-right { background-color: #7c0000; color: white; float: right; }
+
+    .message-file {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+      }
+      .message-file img {
+        max-width: 200px;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+      .message-file a {
+        color: #333;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+
+
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background: white;
+      padding: 20px 30px;
+      border-radius: 8px;
+      width: 300px;
+      text-align: center;
+    }
+
+    .modal-content input {
+      margin-top: 10px;
+      padding: 10px;
+      width: 100%;
+      
+    }
+
+     .modal-content button{
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #7c0000;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+     }
+
+    #previewFile img {
+      display: block;
+      margin-top: 10px;
+      max-width: 100px;
+      border-radius: 10px;
+    }
+
+    #previewFile p {
+      margin-top: 10px;
+    }

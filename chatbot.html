@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CTU Chatbot</title>
+  <link rel="stylesheet" href="chatbot.css">
+</head>
+<body>
+
+<div id="chatbox">
+  <div class="chat-header">University Assistant</div>
+  
+  <div id="chatlog">
+    <div class="message bot-message">Hello! How can I help you today?</div>
+  </div>
+
+  <!-- Suggested Questions -->
+  <div id="suggested-questions">
+    <button class="suggested-question">What are the BSIT requirements?</button>
+    <button class="suggested-question">How to enroll online?</button>
+    <button class="suggested-question">When is the enrollment schedule?</button>
+    <button class="suggested-question">What are the available scholarships?</button>
+    <button class="suggested-question">How much is the tuition fee?</button>
+    <button class="suggested-question">Where is the Registrar's Office?</button>
+    <button class="suggested-question">What subjects are offered in BSCS?</button>
+  </div>
+
+  <div class="input-container">
+    <input type="text" id="userInput" placeholder="Type your message...">
+    <button id="sendButton">Send</button>
+  </div>
+</div>
+
+
+<script src="JS/chatbot.js"></script>
+</body>
+</html>
